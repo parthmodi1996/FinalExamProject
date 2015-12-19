@@ -1,0 +1,5 @@
+util\HibernateUtil.class
+base\RateDAL.class
+base\StudentDAL.class
+domain\StudentDomainModel.class
+domain\RateDomainModel.class

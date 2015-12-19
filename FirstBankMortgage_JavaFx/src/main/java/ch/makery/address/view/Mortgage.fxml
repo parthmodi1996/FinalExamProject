@@ -7,14 +7,41 @@
 
 <AnchorPane prefHeight="363.0" prefWidth="693.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MortgageController">
    <children>
-      <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.65" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="446.0" style="-fx-background-color: darkgreen;">
                <children>
+                  <GridPane layoutX="67.0" layoutY="67.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Income" />
+                        <Label prefHeight="21.0" prefWidth="110.0" text="Expense" GridPane.rowIndex="1" />
+                        <Label text="Credit Score" GridPane.rowIndex="2" />
+                        <Label text="House Cost" GridPane.rowIndex="3" />
+                        <Label text="Term" GridPane.rowIndex="4" />
+                        <TextField fx:id="income" GridPane.columnIndex="1" />
+                        <TextField fx:id="expense" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="creditScore" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="HouseCost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="term" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="135.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleMortgage" text="Calculate Mortgage" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" >
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="362.0" prefWidth="262.0" style="-fx-background-color: darkgreen;">
                <children>
+                  <Label fx:id="Mortgage" layoutX="106.0" layoutY="173.0" text="Label" />
                </children>
             </AnchorPane>
         </items>
